@@ -1,0 +1,41 @@
+<svg viewBox="0 0 64 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sentrix">
+  <defs>
+    <linearGradient id="lgNavy" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#1d3168"/>
+      <stop offset="1" stop-color="#0a1640"/>
+    </linearGradient>
+    <linearGradient id="lgTeal" x1="1" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#7fdcd6"/>
+      <stop offset="0.55" stop-color="#26b9b3"/>
+      <stop offset="1" stop-color="#0c9c97"/>
+    </linearGradient>
+    <linearGradient id="lgRoad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9f3f4"/>
+    </linearGradient>
+    <clipPath id="lgShield">
+      <path d="M32 4 L57 13 Q60 14 60 18 V34 C60 52 48 62 32 67 C16 62 4 52 4 34 V18 Q4 14 7 13 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- shield halves -->
+  <g clip-path="url(#lgShield)">
+    <rect x="-1" y="-1" width="33" height="72" fill="url(#lgNavy)"/>
+    <rect x="32" y="-1" width="33" height="72" fill="url(#lgTeal)"/>
+  </g>
+
+  <!-- radar arcs + road, clipped to shield -->
+  <g clip-path="url(#lgShield)">
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+      <path d="M24 33 A8 8 0 0 1 40 33"/>
+      <path d="M19 33 A13 13 0 0 1 45 33"/>
+      <path d="M14 33 A18 18 0 0 1 50 33"/>
+    </g>
+    <path d="M30 33 C 24 42, 30 50, 22 62 L42 62 C 34 50, 40 42, 34 33 Z" fill="url(#lgRoad)"/>
+    <path d="M32 34 C 31 43, 33 51, 31 61" fill="none" stroke="#0b1640" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="2.2 3.4"/>
+  </g>
+
+  <!-- shield outline -->
+  <path d="M32 4 L57 13 Q60 14 60 18 V34 C60 52 48 62 32 67 C16 62 4 52 4 34 V18 Q4 14 7 13 Z"
+        fill="none" stroke="#ffffff" stroke-width="2.2" stroke-opacity="0.92" stroke-linejoin="round"/>
+</svg>
