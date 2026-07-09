@@ -44,7 +44,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-[clamp(20px,2.4vw,27px)]">Stay ahead of threats.</h4>
             <p className="mt-[6px] max-w-[46ch] text-[14px] text-on-dark-mut">
-              Join our waiting list to get alertted when we go live with AI surveillance and safety intelligence.
+              Join our waiting list to stay informed.
             </p>
           </div>
           {!done ? (
@@ -75,13 +75,22 @@ export default function Footer() {
         <div className="footer-top grid grid-cols-1 gap-10 border-b border-white/[0.08] pb-12 pt-12 min-[481px]:grid-cols-2 min-[1025px]:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
           <div className="footer-brand">
             <Link href="/" aria-label="Sentrix home" className="flex items-center gap-[11px]">
-              <span className="flex h-10 flex-none items-center" aria-hidden="true">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/assets/logo.svg" width={37} height={40} alt="" className="h-10 w-auto" />
-              </span>
-              <span className="font-display text-[20px] font-bold tracking-[0.06em] text-white">
-                SENTRI<b className="text-teal font-bold">X</b>
-              </span>
+              <img
+              src="/assets/logo.png"
+              alt="Sentrix"
+              className="dark:hidden mb-0"
+              width={160}
+              height={140}
+            />
+
+            {/* Dark mode */}
+            <img
+              src="/assets/logo-dark.png"
+              alt="Sentrix"
+              className="hidden dark:block mb-0"
+              width={160}
+              height={140}
+            />
             </Link>
             <p className="my-[18px] max-w-[34ch] text-[14px] leading-[1.7]">
               An AI-powered Safety Intelligence Ecosystem. We help people, organisations and

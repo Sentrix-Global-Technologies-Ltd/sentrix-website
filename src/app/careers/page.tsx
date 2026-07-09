@@ -117,7 +117,7 @@ export default function CareersPage() {
         title="Let's build it together."
         body="Send us your CV and tell us where you'd make an impact."
         buttons={[
-          { href: "mailto:https://hello@sentrixglobaltech.com", label: "Check", variant: "primary" },
+          { href: "#", label: "No Open Positions", variant: "primary" },
           { href: "/about", label: "About Sentrix", variant: "dark" },
         ]}
       />
