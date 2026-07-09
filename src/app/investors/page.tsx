@@ -4,6 +4,7 @@ import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import CtaCenter from "@/components/ui/CtaCenter";
 import SkipLink from "@/components/ui/SkipLink";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Investors — The Future of Safety Intelligence | Sentrix",
@@ -50,7 +51,7 @@ export default function InvestorsPage() {
         </p>
         <div className="reveal d3" style={{ marginTop: 28 }}>
           <a
-            href="mailto:investors@sentrix.global?subject=Investor%20enquiry%20%E2%80%94%20Sentrix"
+            href={`mailto:${EMAILS.investors}?subject=Investor%20enquiry%20%E2%80%94%20Sentrix`}
             className="btn btn-primary btn-lg magnetic"
             data-magnetic="0.3"
           >
@@ -122,7 +123,7 @@ export default function InvestorsPage() {
         title="Let's talk about the future."
         body="For investment enquiries, our deck and a conversation with the team, reach out directly."
         buttons={[
-          { href: "mailto:investors@sentrix.global?subject=Investor%20enquiry%20%E2%80%94%20Sentrix", label: "Contact investor relations", variant: "primary" },
+          { href: `mailto:${EMAILS.investors}?subject=Investor%20enquiry%20%E2%80%94%20Sentrix`, label: "Contact investor relations", variant: "primary" },
           { href: "/about", label: "About Sentrix", variant: "dark" },
         ]}
       />

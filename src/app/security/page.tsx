@@ -4,6 +4,7 @@ import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import CtaCenter from "@/components/ui/CtaCenter";
 import SkipLink from "@/components/ui/SkipLink";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Security & Trust Center | Sentrix Global Technologies",
@@ -22,7 +23,7 @@ const MEASURES = [
 ];
 
 const DISCLOSURE = [
-  <>Email <a href="mailto:security@sentrix.global" style={{ color: "var(--teal-600)", marginLeft: 4 }}>security@sentrix.global</a></>,
+  <>Email <a href={`mailto:${EMAILS.security}`} style={{ color: "var(--teal-600)", marginLeft: 4 }}>{EMAILS.security}</a></>,
   "Give us reasonable time to remediate before disclosure",
   "Don't access, modify or delete data that isn't yours",
   "Act in good faith and we'll do the same",
@@ -123,7 +124,7 @@ export default function SecurityPage() {
                   </li>
                 ))}
               </ul>
-              <a href="mailto:security@sentrix.global" className="btn btn-primary magnetic" data-magnetic="0.25">
+              <a href={`mailto:${EMAILS.security}`} className="btn btn-primary magnetic" data-magnetic="0.25">
                 Report an issue <Icon name="arrow" />
               </a>
             </div>

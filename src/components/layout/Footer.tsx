@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import Icon from "@/components/ui/Icon";
-import { FOOTER_COLUMNS } from "@/lib/site";
+import { FOOTER_COLUMNS, EMAILS } from "@/lib/site";
 
 export default function Footer() {
   const [done, setDone] = useState(false);
@@ -90,11 +90,11 @@ export default function Footer() {
             </p>
             <div className="my-4 grid gap-2">
               <a
-                href="mailto:hello@sentrix.global"
+                href={`mailto:${EMAILS.hello}`}
                 className="flex items-center gap-[9px] text-[13.5px] text-on-dark-mut hover:text-white"
               >
                 <Icon name="mail" className="h-[15px] w-[15px] text-mint" />
-                hello@sentrix.global
+                {EMAILS.hello}
               </a>
               <a
                 href="tel:+10000000000"

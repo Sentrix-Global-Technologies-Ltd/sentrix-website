@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/Icon";
+import { EMAILS } from "@/lib/site";
 
 const ACTIONS = [
   { href: "/contact", icon: "zap", label: "Request a demo", primary: true },
@@ -119,7 +120,7 @@ export default function Concierge() {
         </div>
 
         <div className="border-t border-line px-5 py-[14px] text-[12.5px] text-muted">
-          Prefer email? <a href="mailto:hello@sentrix.global" className="text-teal-600">hello@sentrix.global</a>
+          Prefer email? <a href={`mailto:${EMAILS.hello}`} className="text-teal-600">{EMAILS.hello}</a>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import CtaCenter from "@/components/ui/CtaCenter";
 import SkipLink from "@/components/ui/SkipLink";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Careers — Help Build a Safer World | Sentrix Global Technologies",
@@ -43,7 +44,7 @@ export default function CareersPage() {
         </p>
         <div className="reveal d3" style={{ marginTop: 28 }}>
           <a
-            href="mailto:careers@sentrix.global?subject=Careers%20at%20Sentrix"
+            href={`mailto:${EMAILS.careers}?subject=Careers%20at%20Sentrix`}
             className="btn btn-primary btn-lg magnetic"
             data-magnetic="0.3"
           >
@@ -92,7 +93,7 @@ export default function CareersPage() {
                   <h4>{r.title}</h4>
                   <div className="role-meta">{r.meta}</div>
                 </div>
-                <a className="role-cta" href={`mailto:careers@sentrix.global?subject=${r.subject}`}>
+                <a className="role-cta" href={`mailto:${EMAILS.careers}?subject=${r.subject}`}>
                   Introduce yourself <Icon name="arrow" />
                 </a>
               </div>
@@ -102,8 +103,8 @@ export default function CareersPage() {
             <Icon name="bell" />
             <div>
               Don&apos;t see your role? We&apos;re always glad to hear from exceptional people. Email{" "}
-              <a href="mailto:careers@sentrix.global" style={{ color: "var(--teal-600)" }}>
-                careers@sentrix.global
+              <a href={`mailto:${EMAILS.careers}`} style={{ color: "var(--teal-600)" }}>
+                {EMAILS.careers}
               </a>{" "}
               with your CV and a note about how you&apos;d help build a safer world.
             </div>
@@ -116,7 +117,7 @@ export default function CareersPage() {
         title="Let's build it together."
         body="Send us your CV and tell us where you'd make an impact."
         buttons={[
-          { href: "mailto:careers@sentrix.global?subject=Application%20%E2%80%94%20Sentrix", label: "Apply now", variant: "primary" },
+          { href: `mailto:${EMAILS.careers}?subject=Application%20%E2%80%94%20Sentrix`, label: "Apply now", variant: "primary" },
           { href: "/about", label: "About Sentrix", variant: "dark" },
         ]}
       />

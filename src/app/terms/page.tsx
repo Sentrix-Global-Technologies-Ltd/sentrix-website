@@ -3,6 +3,7 @@ import Link from "next/link";
 import Icon from "@/components/ui/Icon";
 import LegalPage from "@/components/ui/LegalPage";
 import SkipLink from "@/components/ui/SkipLink";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Sentrix Global Technologies",
@@ -82,7 +83,7 @@ export default function TermsPage() {
       <p>These Terms are governed by the laws of the jurisdiction in which Sentrix Global Technologies Limited is established, without regard to conflict-of-law principles. The specific jurisdiction should be confirmed by counsel.</p>
 
       <h2 id="contact">13. Contact</h2>
-      <p>Questions about these Terms can be sent to <a href="mailto:legal@sentrix.global">legal@sentrix.global</a> or via our <Link href="/contact">contact page</Link>.</p>
+      <p>Questions about these Terms can be sent to <a href={`mailto:${EMAILS.legal}`}>{EMAILS.legal}</a> or via our <Link href="/contact">contact page</Link>.</p>
       </LegalPage>
     </>
   );

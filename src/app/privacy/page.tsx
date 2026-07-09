@@ -3,6 +3,7 @@ import Link from "next/link";
 import Icon from "@/components/ui/Icon";
 import LegalPage from "@/components/ui/LegalPage";
 import SkipLink from "@/components/ui/SkipLink";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Sentrix Global Technologies",
@@ -131,7 +132,7 @@ export default function PrivacyPage() {
       <h2 id="contact">12. Contact us</h2>
       <p>
         For any privacy question or request, contact our team at{" "}
-        <a href="mailto:privacy@sentrix.global">privacy@sentrix.global</a> or via our{" "}
+        <a href={`mailto:${EMAILS.privacy}`}>{EMAILS.privacy}</a> or via our{" "}
         <Link href="/contact">contact page</Link>.
       </p>
       </LegalPage>

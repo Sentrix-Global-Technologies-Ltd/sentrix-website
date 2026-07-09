@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import DemoForm from "@/components/home/DemoForm";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Request a Demo — Contact Sentrix",
@@ -57,12 +58,12 @@ export default function ContactPage() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container-x">
           <div className="cap-grid">
-            <a className="cap-item reveal" href="mailto:hello@sentrix.global">
+            <a className="cap-item reveal" href={`mailto:${EMAILS.hello}`}>
               <span className="ic">
                 <Icon name="mail" />
               </span>
               <div>
-                <h4>hello@sentrix.global</h4>
+                <h4>{EMAILS.hello}</h4>
                 <p style={{ fontSize: "12.5px", color: "var(--muted)", marginTop: 2 }}>Email our team</p>
               </div>
             </a>

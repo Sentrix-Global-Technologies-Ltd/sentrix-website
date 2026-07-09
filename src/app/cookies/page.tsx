@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "@/components/ui/Icon";
 import SkipLink from "@/components/ui/SkipLink";
+import { EMAILS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Sentrix Global Technologies",
@@ -78,7 +79,7 @@ export default function CookiesPage() {
             <p>We will update this policy if our use of cookies changes, and we will revise the &ldquo;last updated&rdquo; date above.</p>
 
             <h2>Contact</h2>
-            <p>Questions about cookies? Email <a href="mailto:privacy@sentrix.global">privacy@sentrix.global</a>.</p>
+            <p>Questions about cookies? Email <a href={`mailto:${EMAILS.privacy}`}>{EMAILS.privacy}</a>.</p>
           </div>
         </div>
       </section>

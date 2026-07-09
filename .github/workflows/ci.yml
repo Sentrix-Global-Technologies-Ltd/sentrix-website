@@ -1,0 +1,114 @@
+name: CI/CD
+
+# Mirrors the pipeline shape used by sentrix-backend / sentrix-dashboard /
+# SentrixCore (test + security-scan on every push/PR; build + deploy only on
+# a push to main, and only after tests pass; deploy off by default via the
+# DEPLOY_ENABLED repo variable). The mechanics differ because this repo ships
+# a static export to Namecheap shared hosting (rsync-over-SSH), not a Docker
+# image to the VPS stack — sentrix-web is deliberately NOT part of
+# docker-compose.prod.yml (see docs/DEPLOYMENT_RUNBOOK.md).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Lint + typecheck + build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - name: Typecheck + static export build
+        run: npm run build
+        env:
+          # NEXT_PUBLIC_* values are baked into the static output at build
+          # time (there's no server at runtime to read them from) — this is
+          # the real production API origin, not a placeholder, so a green
+          # build here is the same build that ships.
+          NEXT_PUBLIC_API_BASE_URL: https://${{ vars.API_DOMAIN || 'api.sentrixglobaltech.com' }}/api/v1
+
+      - name: Upload static export
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-export
+          path: out/
+          retention-days: 7
+
+  security-scan:
+    name: Dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm audit --audit-level=high || echo "::warning::npm audit reported high/critical advisories — review the job log."
+
+  deploy:
+    name: Deploy (rsync to Namecheap)
+    runs-on: ubuntu-latest
+    needs: [test, security-scan]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
+    environment: production
+    steps:
+      - name: Download static export
+        uses: actions/download-artifact@v4
+        with:
+          name: site-export
+          path: out/
+
+      - name: Validate DEPLOY_PATH before an rsync --delete touches it
+        # --delete makes this destructive: it removes anything on the remote
+        # that isn't in this build. A blank, root, or otherwise-too-broad
+        # DEPLOY_PATH secret must never reach the rsync step below — this is
+        # a cheap sanity check, not a substitute for setting the secret to
+        # the correct addon-domain subfolder (see DEPLOYMENT_RUNBOOK.md §9).
+        env:
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
+          if [ -z "$DEPLOY_PATH" ]; then
+            echo "::error::DEPLOY_PATH secret is empty — refusing to rsync --delete." && exit 1
+          fi
+          case "$DEPLOY_PATH" in
+            /|/root|/home|~)
+              # Filesystem root or a bare home directory — the shapes most
+              # likely to come from a blank/fat-fingered secret and turn
+              # --delete into a wipe of everything on the account, not just
+              # the site. (A `public_html` path, addon-domain subfolder or
+              # otherwise, is a legitimate normal value and intentionally
+              # NOT blocked here.)
+              echo "::error::DEPLOY_PATH ('$DEPLOY_PATH') looks too broad — point it at this site's own document root, not a shared/home root." && exit 1
+              ;;
+          esac
+          echo "DEPLOY_PATH looks sane: $DEPLOY_PATH"
+
+      - name: rsync to Namecheap Stellar over SSH
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: out/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_port: ${{ secrets.DEPLOY_SSH_PORT }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Post-deploy smoke test
+        run: |
+          for i in $(seq 1 10); do
+            if curl -fsS "https://${{ vars.SITE_DOMAIN || 'sentrixglobaltech.com' }}/"; then
+              echo "healthy"; exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::post-deploy health check never went green" && exit 1
