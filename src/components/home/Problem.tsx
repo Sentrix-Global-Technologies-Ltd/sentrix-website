@@ -50,7 +50,7 @@ export default function Problem() {
 
           {/* Divider */}
           <div className="grid place-items-center px-[10px] max-[760px]:p-1">
-            <span className="grid h-14 w-14 place-items-center rounded-full border border-line bg-surface font-display text-[14px] font-bold text-navy shadow-md max-[760px]:rotate-90 dark:text-mint">
+            <span className="grid h-14 w-14 place-items-center rounded-full border border-line bg-surface font-display text-[14px] font-bold text-navy shadow-md dark:text-mint">
               VS
             </span>
           </div>

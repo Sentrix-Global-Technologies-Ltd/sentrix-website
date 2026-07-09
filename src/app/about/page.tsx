@@ -58,7 +58,7 @@ export default function AboutPage() {
           </h1>
           <p className="lead" style={{ fontSize: "clamp(17px,1.8vw,21px)", maxWidth: "62ch" }}>
             Sentrix Global Technologies Limited is an AI-powered Safety Intelligence Company helping
-            people, organisations, communities and governments stay safer — by making security
+            people, organisations, communities and governments stay safer,by making security
             intelligent, predictive, connected and proactive.
           </p>
           <p className="about-tagline">&ldquo;Know the road before it knows you.&rdquo;</p>
@@ -110,7 +110,7 @@ export default function AboutPage() {
           <p className="lead reveal d2" style={{ margin: "24px auto 0" }}>
             Traditional systems react after incidents occur. Every day, millions face risks while
             travelling, working, running businesses, protecting assets and safeguarding the people
-            they love. Sentrix exists to change that — to help people know earlier, act faster, and
+            they love. Sentrix exists to change that, to help people know earlier, act faster, and
             stay safer.
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               One ecosystem. <span className="text-grad">Built to connect everything.</span>
             </h2>
             <p className="lead">
-              Instead of separate cameras, trackers, monitors and analytics, Sentrix unifies it all —
+              Instead of separate cameras, trackers, monitors and analytics, Sentrix unifies it all,
               so organisations see more, understand more, and act faster.
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function AboutPage() {
               Nine disciplines, working as one.
             </h2>
             <p className="lead">
-              We don&apos;t build isolated tools — we build connected intelligence. A platform that
+              We don&apos;t build isolated tools, we build connected intelligence. A platform that
               doesn&apos;t just identify threats, but helps prevent them.
             </p>
           </div>
@@ -241,7 +241,7 @@ export default function AboutPage() {
               Building the foundation for <span className="text-teal">safety intelligence.</span>
             </h2>
             <p className="lead">
-              Our roadmap reaches beyond products — toward connected, predictive safety
+              Our roadmap reaches beyond products, toward connected, predictive safety
               infrastructure for the world.
             </p>
           </div>
@@ -263,7 +263,7 @@ export default function AboutPage() {
       <CtaCenter
         eyebrow="Join the mission"
         title="Let's build a safer world together."
-        body="Whether you're protecting people, assets, journeys or entire cities — see how Sentrix helps you know earlier, act faster, and stay safer."
+        body="Whether you're protecting people, assets, journeys or entire cities, see how Sentrix helps you know earlier, act faster, and stay safer."
         buttons={[
           { href: "/contact", label: "Request a Demo", variant: "primary" },
           { href: "/solutions", label: "Explore Solutions", variant: "dark" },

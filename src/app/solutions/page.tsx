@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 const CARDS = [
   { icon: "pin", pname: "SentrixGo", title: "Personal Safety Intelligence", body: "Intelligent journey monitoring, route analysis and emergency alerts that help individuals, families and commuters travel with confidence.", href: "/sentrixgo", cta: "Explore SentrixGo", d: "reveal" },
-  { icon: "car", pname: "Verified Transport", title: "Verified Transportation Network", body: "Verified drivers and vehicles, monitored journeys and instant incident escalation — security-first mobility, not just ride-hailing.", href: "/verified-transport", cta: "Explore Verified Transport", d: "reveal d1" },
+  { icon: "car", pname: "Verified Transport", title: "Verified Transportation Network", body: "Verified drivers and vehicles, monitored journeys and instant incident escalation, security-first mobility, not just ride-hailing.", href: "/verified-transport", cta: "Explore Verified Transport", d: "reveal d1" },
   { icon: "eye", pname: "VisionGuard", title: "AI Surveillance & Monitoring", body: "Turn the cameras you already own into intelligent systems that detect threats, recognise behaviour and raise real-time alerts.", href: "/visionguard", cta: "Explore VisionGuard", d: "reveal d2" },
   { icon: "grid", pname: "Unified SOC", title: "Security Operations Centre", body: "One command-and-control environment that unifies every security data source for governments, campuses and smart cities.", href: "/soc", cta: "Explore the SOC", d: "reveal" },
   { icon: "scale", pname: "Insurance Intelligence", title: "Risk & Claims Analytics", body: "Behavioural data and analytics that help insurers validate claims, reconstruct incidents, assess risk and detect fraud in real time.", href: "/insurance", cta: "Explore Insurance Intelligence", d: "reveal d1" },
-  { icon: "truck", pname: "Fleet Intelligence", title: "Fleet Security & Logistics", body: "Total visibility across vehicles and assets — driver behaviour, route optimisation, fuel monitoring and real-time anomaly alerts.", href: "/fleet", cta: "Explore Fleet & Logistics", d: "reveal d2" },
+  { icon: "truck", pname: "Fleet Intelligence", title: "Fleet Security & Logistics", body: "Total visibility across vehicles and assets, driver behaviour, route optimisation, fuel monitoring and real-time anomaly alerts.", href: "/fleet", cta: "Explore Fleet & Logistics", d: "reveal d2" },
 ];
 
 export default function SolutionsPage() {
@@ -30,7 +30,7 @@ export default function SolutionsPage() {
         </h1>
         <p className="lead reveal d2" style={{ fontSize: "clamp(16px,1.7vw,20px)", maxWidth: "60ch" }}>
           From the individual on a journey to a national command centre, Sentrix protects every
-          layer of the safety chain. Explore each platform — or talk to us about a connected
+          layer of the safety chain. Explore each platform or talk to us about a connected
           deployment.
         </p>
       </PageHero>

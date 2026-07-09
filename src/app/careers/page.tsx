@@ -44,11 +44,11 @@ export default function CareersPage() {
         </p>
         <div className="reveal d3" style={{ marginTop: 28 }}>
           <a
-            href={`mailto:${EMAILS.careers}?subject=Careers%20at%20Sentrix`}
+            href="#"
             className="btn btn-primary btn-lg magnetic"
             data-magnetic="0.3"
           >
-            See how to apply <Icon name="arrow" />
+            No Open Positions <Icon name="arrow" />
           </a>
         </div>
       </PageHero>
@@ -73,7 +73,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--surface)", borderBlock: "1px solid var(--line)" }} id="roles">
+      {/* <section className="section" style={{ background: "var(--surface)", borderBlock: "1px solid var(--line)" }} id="roles">
         <div className="container-x">
           <div className="section-head reveal">
             <span className="eyebrow">Where we&apos;re growing</span>
@@ -110,14 +110,14 @@ export default function CareersPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CtaCenter
         eyebrow="Join the mission"
         title="Let's build it together."
         body="Send us your CV and tell us where you'd make an impact."
         buttons={[
-          { href: `mailto:${EMAILS.careers}?subject=Application%20%E2%80%94%20Sentrix`, label: "Apply now", variant: "primary" },
+          { href: "mailto:https://hello@sentrixglobaltech.com", label: "Check", variant: "primary" },
           { href: "/about", label: "About Sentrix", variant: "dark" },
         ]}
       />

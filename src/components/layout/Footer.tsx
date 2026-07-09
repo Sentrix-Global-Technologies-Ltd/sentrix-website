@@ -44,7 +44,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-[clamp(20px,2.4vw,27px)]">Stay ahead of threats.</h4>
             <p className="mt-[6px] max-w-[46ch] text-[14px] text-on-dark-mut">
-              Get Sentrix insights on proactive security, AI surveillance and safety intelligence.
+              Join our waiting list to get alertted when we go live with AI surveillance and safety intelligence.
             </p>
           </div>
           {!done ? (
@@ -57,7 +57,7 @@ export default function Footer() {
                 ref={inputRef}
                 name="email"
                 type="email"
-                placeholder="Your work email"
+                placeholder="Your email"
                 required
                 autoComplete="email"
                 className="w-[min(320px,58vw)] rounded-pill border-[1.5px] border-white/[0.16] bg-white/[0.05] px-4 py-[13px] text-[14.5px] text-white outline-none placeholder:text-on-dark-mut focus:border-teal focus:shadow-[0_0_0_4px_rgba(18,181,176,0.18)]"
@@ -101,7 +101,7 @@ export default function Footer() {
                 className="flex items-center gap-[9px] text-[13.5px] text-on-dark-mut hover:text-white"
               >
                 <Icon name="phone" className="h-[15px] w-[15px] text-mint" />
-                +1 (000) 000-0000
+                +234 (706) 546-2060
               </a>
             </div>
             <div className="flex gap-[10px]">

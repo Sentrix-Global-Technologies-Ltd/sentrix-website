@@ -53,7 +53,7 @@ export default function Hero() {
           <p className="hero-sub reveal d2 mb-[34px] max-w-[54ch] text-[clamp(16.5px,1.8vw,20px)] text-muted">
             Traditional security <strong className="font-semibold text-ink">reacts after incidents happen.</strong>{" "}
             Sentrix unifies AI surveillance, mobility, emergency response, fleet and insurance
-            intelligence into one ecosystem that detects threats early — and helps prevent them.
+            intelligence into one ecosystem that detects threats early and helps prevent them.
           </p>
 
           <div className="hero-actions reveal d3 flex flex-wrap items-center gap-[14px]">

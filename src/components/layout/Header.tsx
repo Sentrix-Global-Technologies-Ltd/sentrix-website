@@ -72,17 +72,23 @@ export default function Header() {
           }
         >
           <Link href="/" aria-label="Sentrix home" className="brand mr-auto flex items-center gap-[11px] group">
-            <span
-              className="logo flex h-10 flex-none items-center transition-transform duration-300 ease-brand group-hover:-rotate-[4deg] group-hover:scale-[1.04]"
-              style={{ filter: "drop-shadow(0 4px 10px rgba(13,27,76,.18))" }}
-              aria-hidden="true"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logo.svg" width={37} height={40} alt="" className="h-10 w-auto" />
-            </span>
-            <span className="font-display text-[20px] font-bold tracking-[0.06em] text-navy dark:text-ink">
-              SENTRI<b className="text-teal font-bold">X</b>
-            </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/logo.png"
+              alt="Sentrix"
+              className="dark:hidden mb-0"
+              width={160}
+              height={140}
+            />
+
+            {/* Dark mode */}
+            <img
+              src="/assets/logo-dark.png"
+              alt="Sentrix"
+              className="hidden dark:block mb-0"
+              width={160}
+              height={140}
+            />
           </Link>
 
           <div className="nav-links hidden items-center gap-1 min-[761px]:flex">

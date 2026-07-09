@@ -24,7 +24,7 @@ export default function SolutionsTeaser() {
             Six intelligence platforms. <span className="text-teal">One mission.</span>
           </h2>
           <p className="lead mt-[18px]">
-            From the individual on a journey to a national command centre — explore each platform in
+            From the individual on a journey to a national command centre, explore each platform in
             depth.
           </p>
         </div>

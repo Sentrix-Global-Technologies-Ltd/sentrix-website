@@ -56,7 +56,7 @@ export default function IndustriesPage() {
           One goal across every sector — <span className="text-grad">stay safer.</span>
         </h1>
         <p className="lead reveal d2" style={{ fontSize: "clamp(16px,1.7vw,20px)", maxWidth: "60ch" }}>
-          Wherever people, assets and operations need protecting, Sentrix adapts to the mission —
+          Wherever people, assets and operations need protecting, Sentrix adapts to the mission,
           helping organisations stay safer, become more intelligent, and respond more effectively.
         </p>
       </PageHero>
@@ -87,7 +87,7 @@ export default function IndustriesPage() {
             </h2>
             <p className="lead">
               From a single journey to national infrastructure, Sentrix scales across cities, borders
-              and continents — coordinating intelligence wherever safety matters.
+              and continents, coordinating intelligence wherever safety matters.
             </p>
           </div>
           <div className="netmap-wrap reveal d1">
@@ -169,7 +169,7 @@ export default function IndustriesPage() {
       <CtaCenter
         eyebrow="Your sector, your mission"
         title="Let's make your organisation safer."
-        body="Tell us your industry and risk profile — we'll tailor Sentrix to fit."
+        body="Tell us your industry and risk profile, we'll tailor Sentrix to fit."
         buttons={[
           { href: "/contact", label: "Request a Demo", variant: "primary" },
           { href: "/solutions", label: "Explore Solutions", variant: "dark" },

@@ -64,16 +64,16 @@ export default function ContactPage() {
               </span>
               <div>
                 <h4>{EMAILS.hello}</h4>
-                <p style={{ fontSize: "12.5px", color: "var(--muted)", marginTop: 2 }}>Email our team</p>
+                <p style={{ fontSize: "12px", color: "var(--muted)", marginTop: 2 }}>Email our team</p>
               </div>
             </a>
-            <a className="cap-item reveal d1" href="tel:+10000000000">
+            <a className="cap-item reveal d1" href="tel:+2347065462060">
               <span className="ic">
                 <Icon name="phone" />
               </span>
               <div>
-                <h4>+1 (000) 000-0000</h4>
-                <p style={{ fontSize: "12.5px", color: "var(--muted)", marginTop: 2 }}>Mon–Fri, business hours</p>
+                <h4>+234 (706) 546-2060</h4>
+                <p style={{ fontSize: "12px", color: "var(--muted)", marginTop: 2 }}>Mon-Fri, business hours</p>
               </div>
             </a>
             <div className="cap-item reveal d2">
