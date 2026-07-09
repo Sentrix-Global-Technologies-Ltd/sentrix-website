@@ -1,0 +1,12 @@
+{
+  "name": "Sentrix Global Technologies",
+  "short_name": "Sentrix",
+  "description": "AI-powered Safety Intelligence Ecosystem.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#070C1C",
+  "theme_color": "#0D1B4C",
+  "icons": [
+    { "src": "/assets/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
