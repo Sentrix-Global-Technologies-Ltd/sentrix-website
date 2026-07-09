@@ -23,7 +23,7 @@ export default function IndustriesTeaser() {
           </h2>
           <p className="lead mt-[18px]">
             Government, transport, insurance, education, healthcare, smart cities, critical
-            infrastructure and more — 16+ sectors, one mission.
+            infrastructure and more. 16+ sectors, one mission.
           </p>
         </div>
 

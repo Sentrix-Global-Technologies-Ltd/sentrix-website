@@ -5,7 +5,7 @@ const OLD_POINTS = [
   "Disconnected tools & blind spots",
   "Manual monitoring, slow response",
   "Unverified people & vehicles",
-  "Evidence gathered — after the loss",
+  "Evidence gathered after the loss",
 ];
 
 const NEW_POINTS = [
@@ -27,7 +27,7 @@ export default function Problem() {
             <span className="text-teal">intelligent.</span>
           </h2>
           <p className="lead mt-[18px]">
-            Most systems record what already went wrong. Sentrix is built to see risk forming — and
+            Most systems record what already went wrong. Sentrix is built to see risk forming and
             to act before it becomes an incident.
           </p>
         </div>

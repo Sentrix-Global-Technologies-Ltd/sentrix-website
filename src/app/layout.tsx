@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+// @ts-ignore
 import "./globals.css";
 import IconSprite from "@/components/layout/IconSprite";
 import Header from "@/components/layout/Header";

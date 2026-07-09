@@ -43,7 +43,7 @@ export default function Ecosystem() {
             One unified ecosystem.
           </h2>
           <p className="lead my-[18px] mb-[30px]">
-            Sentrix brings cameras, tracking, monitoring and analytics into a single platform — so
+            Sentrix brings cameras, tracking, monitoring and analytics into a single platform, so
             you can see more, understand more, and act faster. Every signal feeds one intelligent
             core.
           </p>
@@ -86,7 +86,7 @@ export default function Ecosystem() {
                   Sentrix Core
                 </div>
                 <div className="mt-[3px] font-mono text-[9px] tracking-[0.14em] text-mint">
-                  AI INTELLIGENCE ENGINE
+                 INTELLIGENCE 
                 </div>
               </div>
             </div>
