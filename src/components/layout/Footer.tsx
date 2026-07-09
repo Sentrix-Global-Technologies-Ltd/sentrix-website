@@ -67,7 +67,7 @@ export default function Footer() {
               </button>
             </form>
           ) : (
-            <p className="w-full font-semibold text-[14px] text-mint">Thanks — you&apos;re on the list.</p>
+            <p className="w-full font-semibold text-[14px] text-mint">Thanks, you&apos;re on the list.</p>
           )}
         </div>
 
@@ -85,7 +85,7 @@ export default function Footer() {
             </Link>
             <p className="my-[18px] max-w-[34ch] text-[14px] leading-[1.7]">
               An AI-powered Safety Intelligence Ecosystem. We help people, organisations and
-              governments anticipate risks, monitor threats and respond faster — to know earlier,
+              governments anticipate risks, monitor threats and respond faster to know earlier,
               act faster, and stay safer.
             </p>
             <div className="my-4 grid gap-2">
