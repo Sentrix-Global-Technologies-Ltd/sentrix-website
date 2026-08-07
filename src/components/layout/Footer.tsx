@@ -76,7 +76,7 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" aria-label="Sentrix home" className="flex items-center gap-[11px]">
               <img
-              src="/assets/logo.png"
+              src="/assets/logo-dark.png"
               alt="Sentrix"
               className="dark:hidden mb-0"
               width={160}
